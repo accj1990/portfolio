@@ -22,7 +22,7 @@
     .container {
       display: flex;
       max-width: max-content;
-      margin: auto;
+      margin: 5px 5px 5px 5px;
     }
     aside {
       width: 30%;
@@ -97,17 +97,29 @@
     margin: 0.2em 0;
   }
 
-
-  .experiencia-item {
-  margin-bottom: 1.5rem;
+ .experiencia-item {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-.experiencia-item h3 {
-  margin-bottom: 0.3rem;
-  font-size: 1.1rem;
-  font-weight: bold;
+  .img-exp {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
+    .experiencia-item {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .experiencia-item img {
+      margin-right: 16px;
+    }
 .cargo {
   margin: 0.1rem 0;
   font-weight: 500;
@@ -198,53 +210,68 @@
     </aside>
     <main>
   <section>
-    <h2>Experiência Profissional</h2>
+  <h2>Experiência Profissional</h2>
 
   <div class="experiencia-item">
-    <h3>2025–2025 — Professora de Computação</h3>
-    <p class="cargo"><strong>Computação, Algoritmos, Processamento de Imagens, Sistemas Operacionais</strong></p>
-    <p class="instituicao"><em>Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, Minas Gerais, Brasil</em></p>
-    <p class="descricao">
-      Fui professora regente das disciplinas de Sistemas Operacionais, Algoritmo e Estrutura de Dados II, Fundamentos de Projeto e Análise de Algoritmos e Processamento e Análise de Imagens nos cursos de Sistemas de Informação, Jogos Digitais e Engenharia da Computação da PUC Minas.
-    </p>
+    <img src="./img/logo_puc.png" alt="PUC Minas" class="img-exp" />
+    <div>
+      <h3>2025–2025 — Professora de Computação</h3>
+      <p class="cargo"><strong>Computação, Algoritmos, Processamento de Imagens, Sistemas Operacionais</strong></p>
+      <p class="instituicao"><em>Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, Minas Gerais, Brasil</em></p>
+      <p class="descricao">
+        Fui professora regente das disciplinas de Sistemas Operacionais, Algoritmo e Estrutura de Dados II, Fundamentos de Projeto e Análise de Algoritmos e Processamento e Análise de Imagens nos cursos de Sistemas de Informação, Jogos Digitais e Engenharia da Computação da PUC Minas.
+      </p>
+    </div>
   </div>
 
   <div class="experiencia-item">
-    <h3>2024–2025 — Desenvolvedora de Sistemas</h3>
-    <p class="cargo"><strong>Desenvolvimento fullstack</strong></p>
-    <p class="instituicao"><em>Tamborete Pay, Belo Horizonte, Minas Gerais, Brasil</em></p>
-    <p class="descricao">
-      Atuei com desenvolvimento de microserviços .NET com arquitetura de Portas e Adaptadores, mensageria (RabbitMQ), MongoDB e Clean Code em gateway de pagamentos. Trabalhei no modelo híbrido.
-    </p>
+    <img src="./img/logo_tamborete.png" alt="Tamborete Pay" class="img-exp" />
+    <div>
+      <h3>2024–2025 — Desenvolvedora de Sistemas</h3>
+      <p class="cargo"><strong>Desenvolvimento fullstack</strong></p>
+      <p class="instituicao"><em>Tamborete Pay, Belo Horizonte, Minas Gerais, Brasil</em></p>
+      <p class="descricao">
+        Atuei com desenvolvimento de microserviços .NET com arquitetura de Portas e Adaptadores, mensageria (RabbitMQ), MongoDB e Clean Code em gateway de pagamentos. Trabalhei no modelo híbrido.
+      </p>
+    </div>
   </div>
 
   <div class="experiencia-item">
-    <h3>2022–Atual — Professora Orientadora de Projeto Aplicado MBA</h3>
-    <p class="cargo"><strong>MEI, Orientação acadêmica, Supervisão de projetos aplicados, Consultoria educacional</strong></p>
-    <p class="instituicao"><em>Instituto de Gestão e Tecnologia da Informação LTDA, Belo Horizonte, Minas Gerais, Brasil</em></p>
-    <p class="descricao">
-      Atuo como orientadora de projetos aplicados de MBA, apoiando alunos no desenvolvimento técnico. Trabalho no modelo home-office e modalidade PJ.
-    </p>
+    <img src="./img/logo_xpeduca.png" alt="IGTI" class="img-exp" />
+    <div>
+      <h3>2022–Atual — Professora Orientadora de Projeto Aplicado MBA</h3>
+      <p class="cargo"><strong>MEI, Orientação acadêmica, Supervisão de projetos aplicados, Consultoria educacional</strong></p>
+      <p class="instituicao"><em>Instituto de Gestão e Tecnologia da Informação LTDA, Belo Horizonte, Minas Gerais, Brasil</em></p>
+      <p class="descricao">
+        Atuo como orientadora de projetos aplicados de MBA, apoiando alunos no desenvolvimento técnico. Trabalho no modelo home-office e modalidade PJ.
+      </p>
+    </div>
   </div>
 
   <div class="experiencia-item">
-    <h3>2017–2021 — Desenvolvedora de Sistemas Trainee I, III e Júnior I</h3>
-    <p class="cargo"><strong>Desenvolvimento fullstack</strong></p>
-    <p class="instituicao"><em>Auge Tecnologia &amp; Sistemas, Belo Horizonte, Minas Gerais, Brasil</em></p>
-    <p class="descricao">
-      Atuei com desenvolvimento e manutenção de sistemas educacionais web/mobile, análise de requisitos e ponto de função. Uso de framework próprio (MVC, REST, JEE) e tecnologias como Java, PostgreSQL, JavaScript, TypeScript, Angular, Vue, Jenkins e Mercurial. Trabalhei remoto durante a pandemia.
-    </p>
+    <img src="./img/logo_auge.png" alt="Auge Tecnologia" class="img-exp" />
+    <div>
+      <h3>2017–2021 — Desenvolvedora de Sistemas Trainee I, III e Júnior I</h3>
+      <p class="cargo"><strong>Desenvolvimento fullstack</strong></p>
+      <p class="instituicao"><em>Auge Tecnologia &amp; Sistemas, Belo Horizonte, Minas Gerais, Brasil</em></p>
+      <p class="descricao">
+        Atuei com desenvolvimento e manutenção de sistemas educacionais web/mobile, análise de requisitos e ponto de função. Uso de framework próprio (MVC, REST, JEE) e tecnologias como Java, PostgreSQL, JavaScript, TypeScript, Angular, Vue, Jenkins e Mercurial. Trabalhei remoto durante a pandemia.
+      </p>
+    </div>
   </div>
 
   <div class="experiencia-item">
-    <h3>2013–2015 — Analista de Suporte Técnico e Desenvolvedora</h3>
-    <p class="cargo"><strong>Estágio</strong></p>
-    <p class="instituicao"><em>Prefeitura de Belo Horizonte, Minas Gerais, Brasil</em></p>
-    <p class="descricao">
-      Atuação no suporte técnico de informática da PBH (1 ano e 6 meses), nos sistemas DES (Declaração Eletrônica de Serviços) e NFS-e (Nota Fiscal Eletrônica de Serviços). Atuação como Desenvolvedora na gerência de informática.
-    </p>
+    <img src="./img/logo-pbh.png" alt="Prefeitura de Belo Horizonte" class="img-exp" />
+    <div>
+      <h3>2013–2015 — Analista de Suporte Técnico e Desenvolvedora</h3>
+      <p class="cargo"><strong>Estágio</strong></p>
+      <p class="instituicao"><em>Prefeitura de Belo Horizonte, Minas Gerais, Brasil</em></p>
+      <p class="descricao">
+        Atuação no suporte técnico de informática da PBH (1 ano e 6 meses), nos sistemas DES (Declaração Eletrônica de Serviços) e NFS-e (Nota Fiscal Eletrônica de Serviços). Atuação como Desenvolvedora na gerência de informática.
+      </p>
+    </div>
   </div>
-</section> 
+</section>
 
 <section>
   <h2>Educação</h2>

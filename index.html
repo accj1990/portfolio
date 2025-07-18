@@ -25,13 +25,68 @@
       margin: 5px 5px 5px 5px;
     }
     aside {
-      width: 30%;
-      background-color: #f4f4f4;
-      padding: 1em;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 35%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2vw;
+  box-sizing: border-box;
+  gap: 2rem;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Foto redonda e centralizada */
+aside .photo img {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Cada seção espaçada */
+aside .section {
+  width: 100%;
+}
+
+/* Tags responsivas com wrap automático */
+.skills, .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills span, .tags span {
+  padding: 0.4em 1em;
+  border-radius: 999px;
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Ícones com espaçamento */
+.contact p i {
+  margin-right: 0.5em;
+}
+
+/* Links */
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
     main {
       width: 70%;
       padding: 2em;
+      margin: -45px 0px 0px 0px;
     }
     h2 {
       border-bottom: 2px solid #2e7dcc;
@@ -99,27 +154,30 @@
 
  .experiencia-item {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
   gap: 16px;
   margin-bottom: 24px;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
 }
+
+.experiencia-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+  }
 
   .img-exp {
   width: 80px;
   height: 80px;
   object-fit: contain;
   border-radius: 8px;
+  align-self: anchor-center;
 }
 
-    .experiencia-item {
-      flex-direction: row;
-      align-items: flex-start;
-      text-align: left;
-    }
+.experiencia-item img {
+  margin-right: 16px;
+}
 
-    .experiencia-item img {
-      margin-right: 16px;
-    }
 .cargo {
   margin: 0.1rem 0;
   font-weight: 500;
@@ -153,7 +211,9 @@
       </div>
       <div class="section">
         <h2>Sobre mim</h2>
-          <p><strong>Bacharel em Ciência da Computação</strong> pela <strong>Pontifícia Universidade Católica de Minas Gerais</strong> (PUC Minas). <strong>Mestre</strong> pelo <strong>Programa de Pós-Graduação em Informática</strong> da PUC Minas.</p>
+          <p><strong>Bacharel em Ciência da Computação</strong> pela <strong>Pontifícia Universidade Católica de Minas Gerais</strong> (PUC Minas). </p>
+          
+          <p><strong>Mestre</strong> pelo <strong>Programa de Pós-Graduação em Informática</strong> da PUC Minas.</p>
 
           <p>Sou <strong>entusiasta por tecnologia e educação</strong>, com interesse em desenvolver aprendizados através de novas experiências e troca de conhecimentos nessas áreas.</p>
 
@@ -197,10 +257,22 @@
           <span>Educação</span><span>Tecnologia</span><span>Voluntariado</span><span>Música</span><span>Jogos de Tabuleiro</span><span>Natureza</span>
         </div>
       </div>
+         <div class="section">
+        <h2>Livros de estudo</h2>
+        <p>Possuo alguns livros de interesses, na área da computação. Os principais são apresentados a seguir:</p>
+        <div class="tags">
+          <span>Código Limpo – Robert C. Martin</span>
+          <span>Arquitetura Limpa – Robert C. Martin</span>
+          <span>Sistemas Operacionais – Andrew Tanenbaum</span>
+          <span>Algoritmos – Thomas H. Cormen (CLRS)</span>
+        </div>
+      </div>
       <div class="section contact">
         <h2>Contato</h2>
         <p>Convido você a explorar meu perfil e descobrir como minha experiência e habilidades podem agregar valor à sua equipe, trazendo soluções inovadoras e resultados concretos para os desafios da sua empresa.</p>
-        <p><i class="fa fa-phone"></i> (31) 99660-3408 / (31) 99162-3087</p>
+        <p><i class="fa fa-phone"></i> (31) 99660-3408 (ligações)</p>
+        <p><i class="fa fa-phone"></i> (31) 99162-3087 (whatsapp)</p>
+        <p><i class="fa fa-phone"></i> (31) 3483-6313 (fixo)</p>
         <p><i class="fa fa-envelope"></i> <a href="mailto:accj1990@gmail.com">accj1990@gmail.com</a></p>
         <p><i class="fa fa-map-marker-alt"></i> Belo Horizonte, MG - Vera Cruz</p>
         <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ana-carolina-concei%C3%A7%C3%A3o-de-j-a6791074" target="_blank">LinkedIn</a></p>

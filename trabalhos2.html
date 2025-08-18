@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Ana Carolina Conceição de Jesus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2e7dcc;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .header-links {
+      margin-top: 1em;
+    }
+
+    .header-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5em;
+      padding: 0.5em 1em;
+      border: 1px solid white;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .header-links a:hover {
+      background-color: white;
+      color: #2e7dcc;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    ul.trabalhos {
+      list-style-type: none;
+      padding-left: 0;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+
+    ul.trabalhos li {
+      cursor: pointer;
+      padding: 0.7em 1em;
+      background-color: #e0e0e0;
+      border-radius: 6px;
+      margin-bottom: 0.5em;
+      transition: background-color 0.2s ease-in-out;
+      text-align: center;
+    }
+
+    ul.trabalhos li:hover {
+      background-color: #ccc;
+    }
+
+    .pdf-container {
+      margin: 2rem auto 4rem; /* espaçamento maior do footer */
+      max-width: 95%;
+      text-align: center;
+    }
+
+    .pdf-container > div {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      margin-bottom: 4rem;
+    }
+
+    .pdf-container iframe {
+      width: 90%;
+      height: 700px;
+      border: 1px solid #ccc;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 2rem 1rem 1rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1.5em;
+      }
+
+      .header-links a {
+        display: block;
+        margin: 0.3em auto;
+      }
+
+      ul.trabalhos {
+        width: 90%;
+      }
+
+      .pdf-container iframe {
+        width: 100%;
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ANA CAROLINA CONCEIÇÃO DE JESUS</h1>
+    <p class="cargoT">Desenvolvedora de Sistemas | Professora | Consultora</p>
+    <div class="header-links">
+      <a href="index.html"><i class="fa fa-id-card"></i> Currículo</a>
+      <a href="fale-conosco.html" target="_blank"><i class="fa fa-paper-plane"></i> Fale Comigo</a>  
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2 style="text-align: center; margin-top: 2rem;">📂 Trabalhos</h2>
+      <ul class="trabalhos">
+        <li onclick="mostrarPDF('pdf1')">Arquitetura de Software - Portas e Adaptadores</li>
+      </ul>
+    </section>
+
+    <div class="pdf-container">
+      <div id="pdf1">
+        <h3>Arquitetura de Software - Portas e Adaptadores</h3>
+        <iframe src="artigo-portas-adaptadores.pdf"></iframe>
+      </div>
+
+      <div id="pdf2">
+        <h3>Arquitetura de Software 2 - Portas e Adaptadores</h3>
+        <iframe src="artigo-portas-adaptadores.pdf"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 Ana Carolina Conceição de Jesus. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function mostrarPDF(id) {
+      const todosPDFs = document.querySelectorAll('.pdf-container > div');
+
+      todosPDFs.forEach(p => {
+        if (p.id === id) {
+          if (p.style.display === 'block') {
+            p.style.opacity = 0;
+            setTimeout(() => p.style.display = 'none', 300);
+          } else {
+            p.style.display = 'block';
+            setTimeout(() => p.style.opacity = 1, 10);
+          }
+        } else {
+          p.style.opacity = 0;
+          setTimeout(() => p.style.display = 'none', 300);
+        }
+      });
+
+      // Scroll suave para o PDF
+      const pdfAtivo = document.getElementById(id);
+      setTimeout(() => pdfAtivo.scrollIntoView({ behavior: 'smooth', block: 'start' }), 350);
+    }
+  </script>
+</body>
+</html>

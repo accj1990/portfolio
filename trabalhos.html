@@ -24,25 +24,25 @@
       text-align: center;
     }
 
-    .header-links {
-      margin-top: 1em;
-    }
-
-    .header-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 0.5em;
-      padding: 0.5em 1em;
-      border: 1px solid white;
-      border-radius: 5px;
-      display: inline-block;
-      transition: background-color 0.2s, color 0.2s;
-    }
-
-    .header-links a:hover {
-      background-color: white;
-      color: #2e7dcc;
-    }
+  .header-links {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os links */
+    justify-content: center;
+  }
+  .header-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .header-links a:hover {
+    background-color: white;
+    color: var(--primary);
+  }
 
     .container {
       flex: 1;

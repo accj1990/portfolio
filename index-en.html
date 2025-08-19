@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Ana Carolina Conceição de Jesus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base */
+    * { box-sizing: border-box; }
+    :root {
+      --primary: #2e7dcc;
+      --bg: #f9f9f9;
+      --text: #222;
+      --muted: #666;
+      --card: #fff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 1.75rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      letter-spacing: .5px;
+    }
+    .cargoT {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      margin-top: .4rem;
+    }
+    .header-links {
+      margin-top: 1em;
+    }
+    .header-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5em;
+      padding: 0.5em 1em;
+      border: 1px solid white;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .header-links a:hover {
+      background-color: white;
+      color: var(--primary);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    aside {
+      flex: 1 1 320px;
+      max-width: 380px;
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    main {
+      flex: 2 1 600px;
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: .3em;
+      margin: 1.25em 0 .8em;
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    }
+    .section { margin-bottom: 1.2em; }
+
+    .photo { text-align: center; }
+    .photo img {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    .skills, .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .skills span, .tags span {
+      padding: .4em .9em;
+      border-radius: 999px;
+      background-color: var(--primary);
+      color: #fff;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+
+    .contact p i { margin-right: .5em; }
+    .contact a { color: inherit; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    .experiencia-item, .formacao {
+      display: flex;
+      gap: 1rem;
+      align-items: anchor-center;
+      margin-bottom: 1.4rem;
+      text-align: left;
+    }
+    .experiencia-item img, .formacao img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 8px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .experiencia-item h3, .formacao h3 { margin: 0 0 .3em 0; font-size: 1rem; }
+    .cargo { margin: .1rem 0; font-weight: 600; }
+    .instituicao { margin: .1rem 0; color: var(--primary); font-style: italic; }
+    .descricao { margin-top: .3rem; text-align: justify; }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    ul { padding-left: 1.2rem; margin: .3rem 0; }
+
+    .footer {
+      text-align: center;
+      margin: 2rem auto 1rem;
+      font-size: .9rem;
+      color: var(--muted);
+      padding: .5rem 1rem;
+      max-width: 1200px;
+    }
+
+    .idiomas-options{
+        text-align: right;
+    }
+
+    @media (max-width: 992px) { .container { gap: 1.25rem; } }
+    @media (max-width: 768px) {
+      aside, main { max-width: 100%; }
+      .experiencia-item, .formacao { flex-direction: column; }
+      .experiencia-item img, .formacao img { margin-bottom: .5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="idiomas-options">
+        <div class="header-links">
+            <a href="index.html"><i class="fa fa-flag"></i> PT-BR</a>
+            <a href="index-en.html"><i class="fa fa-flag-usa"></i> EN</a>
+        </div>
+    </div>
+    <h1>ANA CAROLINA CONCEIÇÃO DE JESUS</h1>
+    <p class="cargoT">Systems Developer | Lecturer | Consultant</p>
+
+    <div class="header-links">
+      <a href="fale-conosco-en.html"><i class="fa fa-paper-plane"></i> Contact Me</a>
+      <a href="trabalhos-en.html"><i class="fa fa-briefcase"></i> Portfolio</a>
+      <a href="participacao-bancas-en.html"><i class="fa fa-graduation-cap"></i> Academic Committees</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <div class="photo">
+        <img src="./img/foto-curriculo.png" alt="Photo Ana Carolina">
+      </div>
+      <div class="section">
+        <h2>About Me</h2>
+        <p><strong>Bachelor in Computer Science</strong> from <strong>Pontifícia Universidade Católica de Minas Gerais</strong> (PUC Minas).</p>
+        <p><strong>Master</strong> from the <strong>Graduate Program in Informatics</strong> at PUC Minas.</p>
+        <p>Technology and education enthusiast, aiming to foster learning through new experiences and knowledge exchange.</p>
+        <p>Currently pursuing an MBA in <strong>Conflict Resolution and Mediation</strong>, focusing on developing interpersonal skills valued in professional and personal contexts.</p>
+        <p>Working as a <strong>fullstack systems developer</strong>, with focus on <strong>backend</strong> using <strong>Java</strong>, .NET, <strong>RabbitMQ</strong> and <strong>MongoDB</strong>, delivering robust and scalable solutions.</p>
+      </div>
+
+      <div class="section">
+        <h2>Objective</h2>
+        <p>
+          To work in challenging opportunities in <strong>Information Technology</strong>, applying experience and skills to achieve meaningful results, contribute to team and organizational growth, foster continuous learning, and develop innovative solutions focused on <strong>technical excellence</strong> and <strong>collaboration</strong>.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Languages</h2>
+        <p>The languages below represent current proficiency levels, with ongoing improvement:</p>
+        <ul>
+          <li>Portuguese: C2 (Fluent)</li>
+          <li>English: B1</li>
+          <li>Spanish: A2</li>
+          <li>French: A1</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Skills</h2>
+        <p>The following skills reflect a constant commitment to technical and interpersonal growth.</p>
+        <div class="skills">
+          <span>Java</span><span>Python</span><span>C/C++</span><span>.Net</span><span>C#</span><span>Javascript</span><span>Typescript</span><span>TensorFlow</span><span>OpenCV</span><span>Ionic</span><span>Vue</span><span>React</span><span>HTML</span><span>CSS</span><span>MongoDB</span><span>PostgreSQL</span><span>Oracle</span><span>RabbitMQ</span><span>Clean Code</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Specialization</h2>
+        <p>Specializations reflect ongoing knowledge acquisition and strategic expertise in different areas.</p>
+        <div class="tags">
+          <span>Computer Science</span><span>Machine Learning</span><span>Development</span><span>Automation</span><span>Processes</span><span>Data Analysis</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Interests</h2>
+        <p>Diverse interests; main ones listed below:</p>
+        <div class="tags">
+          <span>Education</span><span>Technology</span><span>Volunteering</span><span>Music</span><span>Board Games</span><span>Nature</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Study Books</h2>
+        <p>Major study books in computing:</p>
+        <div class="tags">
+          <span>Clean Code – Robert C. Martin</span>
+          <span>Clean Architecture – Robert C. Martin</span>
+          <span>Operating Systems – Andrew Tanenbaum</span>
+          <span>Algorithms – Thomas H. Cormen (CLRS)</span>
+        </div>
+      </div>
+
+      <div class="section contact">
+        <h2>Contact</h2>
+        <p>Available for contact to explore how experience and skills can add value to teams and deliver innovative solutions.</p>
+        <p><i class="fa fa-phone"></i> +55 31 99660-3408 (calls)</p>
+        <p><i class="fa fa-phone"></i> +55 31 99162-3087 (WhatsApp)</p>
+        <p><i class="fa fa-phone"></i> +55 31 3483-6313 (landline)</p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:accj1990@gmail.com">accj1990@gmail.com</a></p>
+        <p><i class="fa fa-map-marker-alt"></i> Belo Horizonte, MG – Vera Cruz</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ana-carolina-concei%C3%A7%C3%A3o-de-j-a6791074" target="_blank">LinkedIn</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/accj1990" target="_blank">github.com/accj1990</a></p>
+      </div>
+    </aside>
+
+    <main>
+      <section>
+        <h2>Professional Experience</h2>
+
+        <div class="experiencia-item">
+          <img src="./img/logo_puc.png" alt="PUC Minas" class="img-exp" />
+          <div>
+            <h3>2025–2025 (6 months) — Computer Science Lecturer</h3>
+            <p class="cargo"><strong>Computer Science, Algorithms, Image Processing, Operating Systems</strong></p>
+            <p class="instituicao"><em>Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, Brazil</em></p>
+            <p class="descricao">
+              Lecturer for courses in Operating Systems, Algorithms & Data Structures II, Project & Algorithm Analysis, and Image Processing and Analysis at Information Systems, Digital Games, and Computer Engineering programs.
+            </p>
+          </div>
+        </div>
+
+        <div class="experiencia-item">
+          <img src="./img/logo_tamborete.png" alt="Tamborete Pay" class="img-exp" />
+          <div>
+            <h3>2024–2025 (6 months) — Systems Developer</h3>
+            <p class="cargo"><strong>Fullstack Development</strong></p>
+            <p class="instituicao"><em>Tamborete Pay, Belo Horizonte, Brazil</em></p>
+            <p class="descricao">
+              Development of .NET microservices with Ports & Adapters architecture, messaging (RabbitMQ), MongoDB, and Clean Code in a payment gateway. Hybrid work model.
+            </p>
+          </div>
+        </div>
+
+        <div class="experiencia-item">
+          <img src="./img/logo_xpeduca.png" alt="IGTI" class="img-exp" />
+          <div>
+            <h3>2022–Present (4 years) — MBA Applied Project Supervisor</h3>
+            <p class="cargo"><strong>Academic Guidance, Applied Project Supervision, Educational Consulting</strong></p>
+            <p class="instituicao"><em>Instituto de Gestão e Tecnologia da Informação LTDA, Belo Horizonte, Brazil</em></p>
+            <p class="descricao">
+              Supervision of MBA applied projects, supporting students’ technical development. Home-office, PJ modality.
+            </p>
+          </div>
+        </div>
+
+        <div class="experiencia-item">
+          <img src="./img/logo_auge.png" alt="Auge Tecnologia" class="img-exp" />
+          <div>
+            <h3>2017–2021 (3 years 8 months) — Systems Developer Trainee I, III, Junior I</h3>
+            <p class="cargo"><strong>Fullstack Development</strong></p>
+            <p class="instituicao"><em>Auge Tecnologia & Sistemas, Belo Horizonte, Brazil</em></p>
+            <p class="descricao">
+              Development and maintenance of web/mobile educational systems, requirements analysis, point function. Frameworks: MVC, REST, JEE. Technologies: Java, PostgreSQL, JavaScript, TypeScript, Angular, Vue, Jenkins, Mercurial. Remote during pandemic.
+            </p>
+          </div>
+        </div>
+
+        <div class="experiencia-item">
+          <img src="./img/logo-pbh.png" alt="Prefeitura de Belo Horizonte" class="img-exp" />
+          <div>
+            <h3>2013–2015 (2 years) — Technical Support Analyst & Developer</h3>
+            <p class="cargo"><strong>Internship</strong></p>
+            <p class="instituicao"><em>Prefeitura de Belo Horizonte, Brazil</em></p>
+            <p class="descricao">
+              IT support for PBH systems (DES and NFS-e) and software development in the IT department.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="formacao">
+          <img src="./img/logo_centromed.png" alt="Instituto de Ensino Centro de Mediadores" />
+          <div>
+            <h3>2024–Present — <strong>MBA Specialist</strong></h3>
+            <p><strong>Centro de Mediadores</strong></p>
+            <p><em>Postgraduate Lato Sensu</em></p>
+            <p>Courses in Conflict Resolution, Mediation, Nonviolent Communication.</p>
+          </div>
+        </div>
+
+        <div class="formacao">
+          <img src="./img/logo_puc.png" alt="PUC Minas - Master" />
+          <div>
+            <h3>2021–2024 — <strong>Master’s Degree</strong></h3>
+            <p><strong>Graduate Program in Informatics – PUC Minas</strong></p>
+            <p><em>Postgraduate Strictu Sensu</em></p>
+            <p>Research assistant in predictive behavioral profile models using labeled videos. Python, TensorFlow, OpenCV.</p>
+          </div>
+        </div>
+
+        <div class="formacao">
+          <img src="./img/logo_puc.png" alt="PUC Minas - Bachelor" />
+          <div>
+            <h3>2011–2017 — <strong>Bachelor</strong></h3>
+            <p><strong>Pontifícia Universidade Católica de Minas Gerais (PUC Minas)</strong></p>
+            <p><em>Undergraduate</em></p>
+            <p>Full scholarship through Prouni program, Computer Science degree.</p>
+          </div>
+        </div>
+
+        <div class="formacao">
+          <img src="./img/logo_iemg.png" alt="Instituto de Educação MG" />
+          <div>
+            <h3>2002–2008 — <strong>Student</strong></h3>
+            <p><strong>Instituto de Educação de Minas Gerais</strong></p>
+            <p><em>Basic Education</em></p>
+            <p>Completed elementary and high school in a public school.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Academic Recognition</h2>
+        <p>Undergraduate thesis published at <strong>ACM SAC 2018</strong> (Qualis A1), recognized for innovation and methodological rigor. <strong>ICEI</strong> officially highlighted this achievement on their website, emphasizing student participation in high-impact events and academic excellence.</p>
+      </section>
+
+      <section>
+        <h2>Publications</h2>
+        <ul>
+            <li>
+            <p><strong>2023 — Behavioral Profile & Facial Expressions — ICEIS '23</strong></p>
+            <p>Proposes an unsupervised method to identify correlations between behavioral profiles and facial expressions in video interviews.</p>
+            </li>
+            <li>
+            <p><strong>2023 — NLP for Archetype Classification — ICEIS '23</strong></p>
+            <p>Presents a model for classifying organizational archetypes based on Natural Language Processing techniques applied to business texts.</p>
+            </li>
+            <li>
+            <p><strong>2023 — Probabilistic Mapping for Profiles — CBI '23</strong></p>
+            <p>Develops a probabilistic approach to map employee behavioral profiles based on multiple data sources.</p>
+            </li>
+            <li>
+            <p><strong>2018 — Predicting Resignation via LinkedIn — SAC '18</strong></p>
+            <p>Explores LinkedIn data to predict employee turnover probability using data mining techniques.</p>
+            </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ana Carolina Conceição de Jesus. All rights reserved.</p>
+  </footer>
+</body>
+</html>

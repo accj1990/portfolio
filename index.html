@@ -7,186 +7,191 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Base */
-    * { box-sizing: border-box; }
-    :root {
-      --primary: #2e7dcc;
-      --bg: #f9f9f9;
-      --text: #222;
-      --muted: #666;
-      --card: #fff;
-    }
-    body {
-      margin: 0;
-      font-family: 'Raleway', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  /* Base */
+  * { box-sizing: border-box; }
+  :root {
+    --primary: #2e7dcc;
+    --bg: #f9f9f9;
+    --text: #222;
+    --muted: #666;
+    --card: #fff;
+  }
+  body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
 
-    /* Header */
-    header {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 1.75rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
-      letter-spacing: .5px;
-    }
-    .cargoT {
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
-      margin-top: .4rem;
-    }
+  /* Header */
+  header {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 1.75rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    letter-spacing: .5px;
+  }
+  .cargoT {
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    margin-top: .4rem;
+  }
+  .header-links {
+    margin-top: 1em;
+  }
+  .header-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .header-links a:hover {
+    background-color: white;
+    color: var(--primary);
+  }
 
-    .header-links {
-      margin-top: 1em;
-    }
-    .header-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 0.5em;
-      padding: 0.5em 1em;
-      border: 1px solid white;
-      border-radius: 5px;
-      display: inline-block;
-      transition: background-color 0.2s, color 0.2s;
-    }
-    .header-links a:hover {
-      background-color: white;
-      color: #2e7dcc;
-    }
+  /* Layout principal */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  aside {
+    flex: 1 1 320px;
+    max-width: 380px;
+    background: var(--card);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  main {
+    flex: 2 1 600px;
+    background: var(--card);
+    border-radius: 10px;
+    padding: 1rem;
+  }
 
+  /* Títulos e seções */
+  h2 {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: .3em;
+    margin: 1.25em 0 .8em;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  }
+  .section { margin-bottom: 1.2em; }
 
-    /* Layout principal */
-    .container {
-      display: flex;
-      flex-wrap: wrap;              /* empilha no mobile */
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-    aside {
-      flex: 1 1 320px;              /* cresce/encolhe, base 320px */
-      max-width: 380px;             /* não passa disso em telas largas */
-      background: var(--card);
-      border-radius: 10px;
-      padding: 1rem;
-    }
-    main {
-      flex: 2 1 600px;              /* coluna principal mais larga */
-      background: var(--card);
-      border-radius: 10px;
-      padding: 1rem;
-    }
+  /* Foto */
+  .photo { text-align: center; }
+  .photo img {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+  }
 
-    /* Títulos e seções */
-    h2 {
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: .3em;
-      margin: 1.25em 0 .8em;
-      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-    }
-    .section { margin-bottom: 1.2em; }
+  /* Tags/Skills */
+  .skills, .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+  .skills span, .tags span {
+    padding: .4em .9em;
+    border-radius: 999px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: .9rem;
+    white-space: nowrap;
+  }
 
-    /* Foto */
-    .photo { text-align: center; }
-    .photo img {
-      width: 100%;
-      max-width: 180px;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 1rem;
-    }
+  /* Contato */
+  .contact p i { margin-right: .5em; }
+  .contact a { color: inherit; text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
 
-    /* Tags/Skills */
-    .skills, .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-    }
-    .skills span, .tags span {
-      padding: .4em .9em;
-      border-radius: 999px;
-      background-color: var(--primary);
-      color: #fff;
-      font-size: .9rem;
-      white-space: nowrap;
-    }
+  /* Experiência / Formação */
+  .experiencia-item, .formacao {
+    display: flex;
+    gap: 1rem;
+    align-items: anchor-center;
+    margin-bottom: 1.4rem;
+    text-align: left;
+  }
+  .experiencia-item img, .formacao img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  .experiencia-item h3, .formacao h3 {
+    margin: 0 0 .3em 0;
+    font-size: 1rem;
+  }
+  .cargo { margin: .1rem 0; font-weight: 600; }
+  .instituicao { margin: .1rem 0; color: var(--primary); font-style: italic; }
+  .descricao { margin-top: .3rem; text-align: justify; }
 
-    /* Contato */
-    .contact p i { margin-right: .5em; }
-    .contact a { color: inherit; text-decoration: none; }
-    .contact a:hover { text-decoration: underline; }
+  /* Links gerais */
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-    /* Experiência / Formação */
-    .experiencia-item, .formacao {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      margin-bottom: 1.4rem;
-      text-align: left;
-    }
-    .experiencia-item img, .formacao img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-    .experiencia-item h3, .formacao h3 {
-      margin: 0 0 .3em 0;
-      font-size: 1rem;
-    }
-    .cargo { margin: .1rem 0; font-weight: 600; }
-    .instituicao { margin: .1rem 0; color: var(--primary); font-style: italic; }
-    .descricao { margin-top: .3rem; text-align: justify; }
+  /* Listas */
+  ul { padding-left: 1.2rem; margin: .3rem 0; }
 
-    /* Links gerais */
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin: 2rem auto 1rem;
+    font-size: .9rem;
+    color: var(--muted);
+    padding: .5rem 1rem;
+    max-width: 1200px;
+  }
 
-    /* Listas */
-    ul { padding-left: 1.2rem; margin: .3rem 0; }
+  .idiomas-options{
+    text-align: right;
+  }
 
-    /* Footer */
-    .footer {
-      text-align: center;
-      margin: 2rem auto 1rem;
-      font-size: .9rem;
-      color: var(--muted);
-      padding: .5rem 1rem;
-      max-width: 1200px;
-    }
+  /* Responsividade */
+  @media (max-width: 992px) { .container { gap: 1.25rem; } }
+  @media (max-width: 768px) {
+    aside, main { max-width: 100%; }
+    .experiencia-item, .formacao { flex-direction: column; }
+    .experiencia-item img, .formacao img { margin-bottom: .5rem; }
+  }
+</style>
 
-    /* Responsividade extra */
-    @media (max-width: 992px) {
-      .container { gap: 1.25rem; }
-    }
-    @media (max-width: 768px) {
-      aside, main { max-width: 100%; }
-      .experiencia-item, .formacao { flex-direction: column; }
-      .experiencia-item img, .formacao img { margin-bottom: .5rem; }
-    }
-  </style>
 </head>
 <body>
   <header>
+    <div class="idiomas-options">
+      <div class="header-links">
+        <a href="index.html"><i class="fa fa-flag"></i> PT-BR</a>
+        <a href="index-en.html"><i class="fa fa-flag-usa"></i> EN</a>
+      </div>
+    </div>
     <h1>ANA CAROLINA CONCEIÇÃO DE JESUS</h1>
     <p class="cargoT">Desenvolvedora de Sistemas | Professora | Consultora</p>
 
     <div class="header-links">
-    <a href="fale-conosco.html" target="_blank">
-      <i class="fa fa-paper-plane"></i> Fale Comigo
-    </a>
-    <a href="trabalhos.html" target="_blank">
-      <i class="fa fa-briefcase"></i> Portfólio
-    </a>
+    <a href="fale-conosco.html"><i class="fa fa-paper-plane"></i> Fale Comigo</a>
+    <a href="trabalhos.html"><i class="fa fa-briefcase"></i> Portfólio</a>
+     <a href="participacao-bancas.html"><i class="fa fa-graduation-cap"></i> Participação em Bancas</a>
   </div>
 
   </header>
@@ -276,11 +281,10 @@
     <main>
       <section>
         <h2>Experiência Profissional</h2>
-
         <div class="experiencia-item">
           <img src="./img/logo_puc.png" alt="PUC Minas" class="img-exp" />
           <div>
-            <h3>2025–2025 — Professora de Computação</h3>
+            <h3>2025–2025 (6 meses) — Professora de Computação</h3>
             <p class="cargo"><strong>Computação, Algoritmos, Processamento de Imagens, Sistemas Operacionais</strong></p>
             <p class="instituicao"><em>Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, Minas Gerais, Brasil</em></p>
             <p class="descricao">
@@ -292,7 +296,7 @@
         <div class="experiencia-item">
           <img src="./img/logo_tamborete.png" alt="Tamborete Pay" class="img-exp" />
           <div>
-            <h3>2024–2025 — Desenvolvedora de Sistemas</h3>
+            <h3>2024–2025 (6 meses) — Desenvolvedora de Sistemas</h3>
             <p class="cargo"><strong>Desenvolvimento fullstack</strong></p>
             <p class="instituicao"><em>Tamborete Pay, Belo Horizonte, Minas Gerais, Brasil</em></p>
             <p class="descricao">
@@ -304,7 +308,7 @@
         <div class="experiencia-item">
           <img src="./img/logo_xpeduca.png" alt="IGTI" class="img-exp" />
           <div>
-            <h3>2022–Atual — Professora Orientadora de Projeto Aplicado MBA</h3>
+            <h3>2022–Atual (4 anos) — Professora Orientadora de Projeto Aplicado MBA</h3>
             <p class="cargo"><strong>MEI, Orientação acadêmica, Supervisão de projetos aplicados, Consultoria educacional</strong></p>
             <p class="instituicao"><em>Instituto de Gestão e Tecnologia da Informação LTDA, Belo Horizonte, Minas Gerais, Brasil</em></p>
             <p class="descricao">
@@ -316,7 +320,7 @@
         <div class="experiencia-item">
           <img src="./img/logo_auge.png" alt="Auge Tecnologia" class="img-exp" />
           <div>
-            <h3>2017–2021 — Desenvolvedora de Sistemas Trainee I, III e Júnior I</h3>
+            <h3>2017–2021 (3 anos e 8 meses) — Desenvolvedora de Sistemas Trainee I, III e Júnior I</h3>
             <p class="cargo"><strong>Desenvolvimento fullstack</strong></p>
             <p class="instituicao"><em>Auge Tecnologia &amp; Sistemas, Belo Horizonte, Minas Gerais, Brasil</em></p>
             <p class="descricao">
@@ -328,7 +332,7 @@
         <div class="experiencia-item">
           <img src="./img/logo-pbh.png" alt="Prefeitura de Belo Horizonte" class="img-exp" />
           <div>
-            <h3>2013–2015 — Analista de Suporte Técnico e Desenvolvedora</h3>
+            <h3>2013–2015 (2 anos) — Analista de Suporte Técnico e Desenvolvedora</h3>
             <p class="cargo"><strong>Estágio</strong></p>
             <p class="instituicao"><em>Prefeitura de Belo Horizonte, Minas Gerais, Brasil</em></p>
             <p class="descricao">
@@ -340,7 +344,6 @@
 
       <section>
         <h2>Educação</h2>
-
         <div class="formacao">
           <img src="./img/logo_centromed.png" alt="Instituição - Centro de Mediadores" />
           <div>
@@ -383,8 +386,8 @@
       </section>
 
       <section>
-        <h2>Reconhecimento</h2>
-        <p>Trabalho de conclusão de curso publicado no SAC 2018 (Qualis A1), com notícia do ICEI (Instituto de Ciências Exatas e Informática) da PUC Minas disponível em <a href="https://icei.pucminas.br/index.php/cursos/graduacao/ciencia-da-computacao/coracao-eucaristico/noticias-ciencia-computacao/518-trabalho-de-conclusao-de-curso-publicado-em-conferencia-quais-a1" target="_blank">ACM SAC 2018</a>.</p>
+        <h2>Reconhecimento Acadêmico</h2>
+        <p>O trabalho de conclusão de curso foi publicado no <strong>ACM SAC 2018</strong> (Qualis A1), um congresso de grande relevância em sistemas e computação, destacando-se pela inovação e rigor metodológico. O <strong>Instituto de Ciências Exatas e Informática (ICEI)</strong> parabenizou a conquista em seu site, ressaltando a importância da participação de seus alunos em eventos de alto impacto e o compromisso com a excelência acadêmica e científica.</p>
       </section>
 
       <section>
@@ -407,52 +410,6 @@
             Explora dados do LinkedIn para prever a probabilidade de desligamento de funcionários, utilizando técnicas de mineração de dados.</p>
           </li>
         </ul>
-      </section>
-
-      <section id="tccs-avaliados">
-        <h2>Participação em Bancas (PUC Minas) - 2022-2025</h2>
-
-        <article class="tcc">
-          <p><strong>Título:</strong> Análise Comparativa de serviços de mensageria na Comunicação entre Microsserviços: Apache Kafka, AWS Simple Queue Service e RabbitMQ</p>
-          <p><strong>Alunos(as):</strong> Julia Lopes Rodrigues Silva, Leonardo Monteiro Martins</p>
-          <p><strong>Orientador(a):</strong> Cleia Marcia Gomes Amaral</p>
-          <p><strong>Banca Avaliadora:</strong> Juliana Padilha e Ana Carolina Conceição de Jesus</p>
-        </article>
-        <hr>
-
-        <article class="tcc">
-          <p><strong>Título:</strong> Extração de dados de redes sociais e análise de sentimento</p>
-          <p><strong>Aluno(a):</strong> Lucas Spartacus Vieira Carvalho</p>
-          <p><strong>Orientador(a):</strong> Humberto Torres Marques Neto</p>
-          <p><strong>Banca Avaliadora:</strong> Mark Alan Junho Song e Ana Carolina Conceição de Jesus</p>
-          <hr>
-
-          <p><strong>Título:</strong> <a href="http://bib.pucminas.br:8080/pergamumweb/vinculos/00000d/00000d17.pdf">Desenvolvimento de Ray Tracing em tempo real com pesquisa em árvores</a></p>
-          <p><strong>Aluno(a):</strong> André Lucas Ribeiro Costa</p>
-          <p><strong>Orientador(a):</strong> Rosilane Ribeiro da Mota</p>
-          <p><strong>Banca Avaliadora:</strong> Roque Anderson Saldanha Teixeira e Ana Carolina Conceição de Jesus</p>
-
-          <hr>
-
-          <p><strong>Título:</strong> Seleção de Instâncias Representativas para Caracterização dos Perfis de Crianças e Adolescentes com Depressão</p>
-          <p><strong>Aluno(a):</strong> Ariane Carla Barbosa da Silva</p>
-          <p><strong>Orientador(a):</strong> Cristiane Neri Nobre</p>
-          <p><strong>Banca Avaliadora:</strong> Fátima de Lima Procópio Duarte e Ana Carolina Conceição de Jesus</p>
-
-          <hr>
-
-          <p><strong>Título:</strong> Análise do perfil de usuários do Facebook utilizando agrupamento Fuzzy</p>
-          <p><strong>Aluno(a):</strong> David Alvarenga Salomao Mattar</p>
-          <p><strong>Orientador(a):</strong> Cristiane Neri Nobre</p>
-          <p><strong>Banca Avaliadora:</strong> Fátima de Lima Procópio Duarte e Ana Carolina Conceição de Jesus</p>
-
-          <hr>
-
-          <p><strong>Título:</strong> Implementando Privacy by Design para Reimaginar a Privacidade no Instagram</p>
-          <p><strong>Aluno(a):</strong> Lucas Guimarães Campregher</p>
-          <p><strong>Orientador(a):</strong> Fábio Leandro Rodrigues Cordeiro</p>
-          <p><strong>Banca Avaliadora:</strong> Daniel de Oliveira Capanema e Ana Carolina Conceição de Jesus</p>
-        </article>
       </section>
     </main>
   </div>

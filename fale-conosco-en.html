@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário de Contato - Ana Carolina Conceição de Jesus</title>
+  <title>Contact Form - Ana Carolina Conceição de Jesus</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -55,7 +55,7 @@
       flex: 1;
     }
 
-    #form-contato {
+    #contact-form {
       display: flex;
       flex-direction: column;
       gap: 1em;
@@ -63,13 +63,13 @@
       width: 100%;
     }
 
-    #form-contato label {
+    #contact-form label {
       font-weight: bold;
       text-align: left;
     }
 
-    #form-contato input,
-    #form-contato textarea {
+    #contact-form input,
+    #contact-form textarea {
       padding: 0.8em;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -78,7 +78,7 @@
       box-sizing: border-box;
     }
 
-    #form-contato button {
+    #contact-form button {
       padding: 0.8em 1.5em;
       background-color: #2e7dcc;
       color: white;
@@ -91,7 +91,7 @@
       transition: opacity 0.2s;
     }
 
-    #form-contato button:hover {
+    #contact-form button:hover {
       opacity: 0.9;
     }
 
@@ -109,96 +109,78 @@
       padding: 2rem 1rem 1rem;
     }
 
-    .idiomas-options{
+    .language-options{
       text-align: right;
     }
 
-    /* Responsividade */
     @media (max-width: 768px) {
-      header {
-        padding: 1.5em 1em;
-      }
-
-      .header-links {
-        gap: 0.5rem;
-      }
-
-      #form-contato {
-        width: 100%;
-      }
+      header { padding: 1.5em 1em; }
+      .header-links { gap: 0.5rem; }
+      #contact-form { width: 100%; }
     }
 
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-
-      .cargoT {
-        font-size: 1em;
-      }
-
-      #form-contato button {
-        width: 100%;
-      }
+      header h1 { font-size: 1.5em; }
+      .cargoT { font-size: 1em; }
+      #contact-form button { width: 100%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="idiomas-options">
+    <div class="language-options">
         <div class="header-links">
             <a href="fale-conosco.html"><i class="fa fa-flag"></i> PT-BR</a>
             <a href="fale-conosco-en.html"><i class="fa fa-flag-usa"></i> EN</a>
         </div>
     </div>
     <h1>ANA CAROLINA CONCEIÇÃO DE JESUS</h1>
-    <p class="cargoT">Desenvolvedora de Sistemas | Professora | Consultora</p>
+    <p class="cargoT">Systems Developer | Professor | Consultant</p>
 
     <div class="header-links">
-      <a href="index.html"><i class="fa fa-id-card"></i> Currículo</a>
-      <a href="trabalhos.html"><i class="fa fa-briefcase"></i> Portfólio</a>
-      <a href="participacao-bancas.html"><i class="fa fa-graduation-cap"></i> Participação em Bancas</a>
-    </div>
+      <a href="index-en.html"><i class="fa fa-id-card"></i> Resume</a>
+      <a href="trabalhos-en.html"><i class="fa fa-briefcase"></i> Portfolio</a>
+      <a href="participacao-bancas-en.html"><i class="fa fa-graduation-cap"></i> Academic Committees</a>
   </header>
 
-  <section id="contato" class="section">
-    <h2>Contato</h2>
-    <form id="form-contato">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="user_name" required>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="user_name" required>
 
       <label for="email">Email</label>
       <input type="email" id="email" name="user_email" required>
 
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="message" rows="6" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
 
-      <button type="submit">Enviar Mensagem</button>
+      <button type="submit">Send Message</button>
       <p id="msg"></p>
     </form>
   </section>
 
   <footer class="footer">
-    &copy; 2025 Ana Carolina Conceição de Jesus. Todos os direitos reservados.
+    &copy; 2025 Ana Carolina Conceição de Jesus. All rights reserved.
   </footer>
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    emailjs.init("l3ZwuITHs5crdn6jo"); // substitua pelo seu Public Key
+    emailjs.init("l3ZwuITHs5crdn6jo"); // replace with your Public Key
 
-    const form = document.getElementById('form-contato');
+    const form = document.getElementById('contact-form');
     const msg = document.getElementById('msg');
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       emailjs.sendForm('service_gnac2jx', 'template_5n3q2lt', this)
         .then(function() {
-          msg.textContent = 'Mensagem enviada com sucesso!';
+          msg.textContent = 'Message sent successfully!';
           msg.style.color = 'green';
           form.reset();
         }, function(error) {
-          msg.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+          msg.textContent = 'Failed to send message. Please try again.';
           msg.style.color = 'red';
           console.error(error);
         });

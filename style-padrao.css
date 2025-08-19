@@ -7,7 +7,8 @@
   --bg: #f9f9f9;
   --text: #222;
   --muted: #666;
-  --card: #fff;
+  --card: #ffffff;
+  --cardaside:#f0f4f8;
 }
 body {
   margin: 0;
@@ -21,7 +22,6 @@ body {
    Layout principal
 ===================================== */
 .container {
-  display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   max-width: 1200px;
@@ -31,7 +31,7 @@ body {
 aside {
   flex: 1 1 320px;
   max-width: 380px;
-  background: var(--card);
+  background: var(--cardaside);
   border-radius: 10px;
   padding: 1rem;
 }
@@ -126,23 +126,20 @@ a:hover { text-decoration: underline; }
 ===================================== */
 ul { padding-left: 1.2rem; margin: .3rem 0; }
 
-/* =====================================
-   Footer
-===================================== */
-.footer {
-  text-align: center;
-  margin: 2rem auto 1rem;
-  font-size: .9rem;
-  color: var(--muted);
-  padding: .5rem 1rem;
-  max-width: 1200px;
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
 }
 
 /* =====================================
    Idiomas
 ===================================== */
 .idiomas-options{
-  text-align: right;
+    text-align: right;
 }
 
 /* =====================================
@@ -174,4 +171,16 @@ ul { padding-left: 1.2rem; margin: .3rem 0; }
   aside, main { max-width: 100%; }
   .experiencia-item, .formacao { flex-direction: column; }
   .experiencia-item img, .formacao img { margin-bottom: .5rem; }
+}
+
+/* =====================================
+   Footer
+===================================== */
+.footer {
+  text-align: center;
+  margin: 2rem auto 1rem;
+  font-size: .9rem;
+  color: var(--muted);
+  padding: .5rem 1rem;
+  max-width: 1200px;
 }

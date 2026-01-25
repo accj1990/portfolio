@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Ana Carolina Conceição de Jesus</title>
+  <title>Portfolio - Ana Carolina Conceição de Jesus</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style-padrao.css">
@@ -19,38 +19,32 @@
       min-height: 100vh;
     }
 
-    .container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      max-width: 1400px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    ul.works {
+    ul.trabalhos {
       list-style-type: none;
       padding-left: 0;
-      max-width: 500px;
+      max-width: 600px;
       margin: 2rem auto;
     }
 
-    ul.works li {
+    ul.trabalhos li {
       cursor: pointer;
-      padding: 0.7em 1em;
+      padding: 1em;
       background-color: #e0e0e0;
       border-radius: 6px;
-      margin-bottom: 0.5em;
-      transition: background-color 0.2s ease-in-out;
+      margin-bottom: 0.8em;
+      transition: all 0.2s ease-in-out;
       text-align: center;
+      font-weight: 500;
     }
 
-    ul.works li:hover {
-      background-color: #ccc;
+    ul.trabalhos li:hover {
+      background-color: #0056b3;
+      color: #fff;
+      transform: translateY(-2px);
     }
 
     .pdf-container {
-      margin: 2rem auto 4rem; /* more spacing from footer */
+      margin: 2rem auto 4rem;
       max-width: 95%;
       text-align: center;
     }
@@ -63,20 +57,25 @@
     }
 
     .pdf-container iframe {
-        width: 270%;      /* 90% * 3 */
-        max-width: 100%;  /* do not exceed screen */
-        height: 2100px;   /* 700px * 3 */
+        width: 100%;      
+        max-width: 1000px;  
+        height: 1200px;
         border: 1px solid #ccc;
     }
 
+    .link-dicas {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
     @media (max-width: 768px) {
-      ul.works {
+      ul.trabalhos {
         width: 90%;
       }
 
       .pdf-container iframe {
         width: 100%;
-        height: 625px; /* 500px * 1.25 */
+        height: 600px; 
       }
     }
   </style>
@@ -90,26 +89,26 @@
       </div>
     </div>
     <h1>ANA CAROLINA CONCEIÇÃO DE JESUS</h1>
-    <p class="cargoT">Systems Developer | Professor | Consultant</p>
+    <p class="cargoT">Systems Developer | Teacher | Consultant</p>
     <div class="header-links">
       <a href="index-en.html"><i class="fa fa-id-card"></i> Resume</a>
-      <a href="fale-conosco-en.html"><i class="fa fa-paper-plane"></i> Contact Me</a>
-      <a href="participacao-bancas-en.html"><i class="fa fa-graduation-cap"></i> Academic Committees</a>
+      <a href="contact-me.html"><i class="fa fa-paper-plane"></i> Contact Me</a>
+      <a href="thesis-committees.html"><i class="fa fa-graduation-cap"></i> Thesis Committees</a>
     </div>
   </header>
 
   <div class="container">
     <section>
-      <h2 style="text-align: center; margin-top: 2rem;">📂 Works</h2>
-      <ul class="works">
-        <li onclick="showPDF('pdf1')">Software Architecture - Ports and Adapters</li>
+      <h2 style="text-align: center; margin-top: 2rem;">📂 Works and Articles</h2>
+      <ul class="trabalhos">
+        <li onclick="mostrarPDF('pdf1')">Software Architecture - Ports and Adapters</li>
+        <li onclick="mostrarPDF('pdf2')">Scalable Data Persistence in .NET (Dapper & Repository Pattern)</li>
       </ul>
     </section>
 
-    <div class="link-tips">
-  <p>Check out my development tips available on <a href="https://www.notion.so/Dicas-Dev-2aa1e4eb2ec4805fbf18cc05fa22ae68?source=copy_link" target="_blank">Notion</a></p>
-</div>
-
+    <div class="link-dicas">
+      <p>Check out my development tips on <a href="https://www.notion.so/Dicas-Dev-2aa1e4eb2ec4805fbf18cc05fa22ae68?source=copy_link" target="_blank">Notion</a></p>
+    </div>
 
     <div class="pdf-container">
       <div id="pdf1">
@@ -118,38 +117,37 @@
       </div>
 
       <div id="pdf2">
-        <h3>Software Architecture 2 - Ports and Adapters</h3>
-        <iframe src="artigo-portas-adaptadores.pdf"></iframe>
+        <h3>Scalable Data Persistence in .NET: A Hybrid Approach</h3>
+        <iframe src="artigo-persistência-dotnet.pdf"></iframe>
       </div>
     </div>
   </div>
 
   <footer class="footer">
-    &copy; 2025 Ana Carolina Conceição de Jesus. All rights reserved.
+    &copy; 2026 Ana Carolina Conceição de Jesus. All rights reserved.
   </footer>
 
   <script>
-    function showPDF(id) {
-      const allPDFs = document.querySelectorAll('.pdf-container > div');
+    function mostrarPDF(id) {
+      const todosPDFs = document.querySelectorAll('.pdf-container > div');
 
-      allPDFs.forEach(p => {
+      todosPDFs.forEach(p => {
         if (p.id === id) {
           if (p.style.display === 'block') {
             p.style.opacity = 0;
             setTimeout(() => p.style.display = 'none', 300);
           } else {
             p.style.display = 'block';
-            setTimeout(() => p.style.opacity = 1, 10);
+            setTimeout(() => {
+                p.style.opacity = 1;
+                p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
           }
         } else {
           p.style.opacity = 0;
-          setTimeout(() => p.style.display = 'none', 300);
+          p.style.display = 'none';
         }
       });
-
-      // Smooth scroll to the PDF
-      const activePDF = document.getElementById(id);
-      setTimeout(() => activePDF.scrollIntoView({ behavior: 'smooth', block: 'start' }), 350);
     }
   </script>
 </body>

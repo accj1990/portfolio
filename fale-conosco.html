@@ -75,12 +75,12 @@
       margin-top: 0.5em;
     }
 
-   @media (max-width: 768px) {}
+   @media (max-width: 768px) {
 
       #form-contato button {
         width: 100%;
       }
-  }
+    }
   </style>
 </head>
 <body>
@@ -119,9 +119,11 @@
   </section>
 
   <footer class="footer">
-    &copy; 2025 Ana Carolina Conceição de Jesus. Todos os direitos reservados.
+    &copy; <span id="ano"></span> Ana Carolina Conceição de Jesus. Todos os direitos reservados.
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
   </footer>
-
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>

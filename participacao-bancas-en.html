@@ -213,8 +213,11 @@
     </div>
     </section>
   </div>
-  <footer class="footer">
-    &copy; 2025 Ana Carolina Conceição de Jesus. All rights reserved.
+   <footer class="footer">
+    &copy; <span id="ano"></span> Ana Carolina Conceição de Jesus. All rights reserved.
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
   </footer>
   <script>
     // Toggle sections (PUC and XPE)

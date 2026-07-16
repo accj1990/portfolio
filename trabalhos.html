@@ -123,8 +123,11 @@
     </div>
   </div>
 
-  <footer class="footer">
-    &copy; 2026 Ana Carolina Conceição de Jesus. Todos os direitos reservados.
+ <footer class="footer">
+    &copy; <span id="ano"></span> Ana Carolina Conceição de Jesus. Todos os direitos reservados.
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
   </footer>
 
   <script>
